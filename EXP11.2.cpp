@@ -1,21 +1,23 @@
 #include<iostream>
 using namespace std;
-
-class Cube {
-    private:
-    float l=3.0, w=5.0, h=7.0;
+class cube
+{
     public:
-    float calculate(){
-        float vol=l*w*h;
-        return vol;
-    }
-    float display(float a){
-        cout<<"Volume of cuboid = "<<a;
+    double height=3.0;
+    double width=4.0;
+    double length=5.0;
+
+    double volume()
+    {
+        double v;
+        v=height*width*length;
+        return v;
     }
 };
 
-int main() {
-    Cube c1;
-    float vol=c1.calculate();
-    c1.display(vol);
+int main()
+{
+    cube cube1;
+    double v = cube1.volume();
+    cout<<"volume:"<<v<<endl;
 }
